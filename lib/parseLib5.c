@@ -7,18 +7,13 @@
 #include <stdlib.h>
 
 #include "randomLib.h"
-
+#include "strLib.h"
 void handleMallocError(void) {
     puts("MALLOC ERROR. No enougth memory on device.");
     exit(1);
 }
 
-int isDigit(char c) { return c >= '0' && c <= '9' ? 1 : 0; }
-int isValidIntChar(char c) { return isDigit(c) || c == '-'; }
-int isSpace(char c) { return c == ' ' || c == '\t' || c == '\n'; }
-int isValidDoubleChar(char c) { return isValidIntChar(c) || c == '.'; }
-int isValidDoubleStringChar(char c) { return isValidDoubleChar(c) || isSpace(c); }
-int isValidIntStringChar(char c) { return isValidIntChar(c) || isSpace(c); }
+
 int isG0(long num) { return num > 0; }
 
 char* getStatusDescription(size_t code) {

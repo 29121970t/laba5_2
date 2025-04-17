@@ -8,14 +8,7 @@ typedef enum StatusCode { SUCCES, ERMALLOC, EROUTOFRANGE, ERTOOLONG, ERINVALIDAR
 
 void handleMallocError(void);
 
-int isDigit(char c);
-int isValidIntChar(char c);
-int isSpace(char c);
-int isValidDoubleChar(char c);
-int isValidDoubleStringChar(char c);
-int isValidIntString(char c);
-int isValidString(const char* str, int (*validator)(char));
-int isValidString_l(const char* str, size_t length, int (*validator)(char));
+
 
 size_t getLine(char** string, FILE* stream);
 size_t readLine(char** string, size_t* size);

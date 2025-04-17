@@ -18,3 +18,9 @@ void* memcpy(void* dest, const void* src, size_t len) {
     while (len--) *d++ = *s++;
     return dest;
 }
+int isDigit(char c) { return c >= '0' && c <= '9' ? 1 : 0; }
+int isValidIntChar(char c) { return isDigit(c) || c == '-'; }
+int isSpace(char c) { return c == ' ' || c == '\t' || c == '\n'; }
+int isValidDoubleChar(char c) { return isValidIntChar(c) || c == '.'; }
+int isValidDoubleStringChar(char c) { return isValidDoubleChar(c) || isSpace(c); }
+int isValidIntStringChar(char c) { return isValidIntChar(c) || isSpace(c); }

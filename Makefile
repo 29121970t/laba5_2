@@ -1,6 +1,9 @@
 #Libs += lib/randomLib.o lib/LabMenu.o lib/strLib.o
 Libs += lib/parseLib5.o
 Libs += lib/mStack.o
+Libs += lib/RPN.o
+Libs += lib/strLib.o
+
 CFLAGS += -x c
 CFLAGCS += -Wall -Wextra -Wpedantic \
           -Wformat=2 -Wno-unused-parameter -Wshadow \
